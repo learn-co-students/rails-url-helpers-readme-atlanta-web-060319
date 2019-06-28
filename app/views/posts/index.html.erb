@@ -1,3 +1,10 @@
+<%# This posts each post title as a link to it's own show page, using Rails-specific syntax %>
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
+
+
+<%# This just posts the post titles to the page wihtout a link %>
+<%# <% @posts.each do |post| %>
+  <%# <div><%= post.title %></div> %>
+<%# <% end %> %>
